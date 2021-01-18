@@ -46,7 +46,7 @@ async fn create() -> Result<HttpResponse, CustomError> {
     if let Err(e) = read_csv_insert("files/personas.csv"){
         eprintln!("{}",e);
     }
-    Ok(HttpResponse::Ok().json("Insertados"))
+    Ok(HttpResponse::Ok().json("OK"))
 }
 
 pub fn init_routes(comfig: &mut web::ServiceConfig) {
